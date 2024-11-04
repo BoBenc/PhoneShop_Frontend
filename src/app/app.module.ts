@@ -13,7 +13,7 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { environments } from './environments/environments';
+//import { environments } from './environments/environments';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { environments } from './environments/environments';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    AngularFireModule.initializeApp(environments.firebaseConfig),
+    //AngularFireModule.initializeApp(environments.firebaseConfig),
     AngularFireDatabaseModule
   ],
   providers: [],
