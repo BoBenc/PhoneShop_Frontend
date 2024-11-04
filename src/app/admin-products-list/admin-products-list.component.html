@@ -2,3 +2,32 @@
     <div *ngFor="let n of columns"class="col">{{n.text}}</div>
     <div class="col">Műveletek</div>
 </div>
+
+<div class="row my-3">
+    <div *ngFor="let n of columns" class="col">
+        <ng-container *ngIf="n.type == 'textarea'; else simainput">
+            <textarea [(ngModel)]="newProduct[n.key]" class="form-control"></textarea>
+        </ng-container>
+        <ng-template #simainput>
+            <input [(ngModel)]="newProduct[n.key]" [type]="n.type" class="form-control">
+        </ng-template>
+    </div>
+    <div class="col">
+        <button (click)="addProduct()" type="button" class="btn btn-primary">Hozzáadás</button>
+    </div>
+</div>
+
+<div class="row my-3">
+    <div *ngFor="let n of columns" class="col">
+        <ng-container *ngIf="n.type == 'textarea'; else simainput">
+            <textarea [(ngModel)]="products[n.key]" class="form-control"></textarea>
+        </ng-container>
+        <ng-template #simainput>
+            <input [(ngModel)]="products[n.key]" [type]="n.type" class="form-control">
+        </ng-template>
+    </div>
+    <div class="col">
+        <button (click)="updateProduct(products)" type="button" class="btn btn-success">Frissítés</button>
+        <button (click)="deleteProduct(products)" type="button" class="btn btn-danger">Törlés</button>
+    </div>
+</div>
