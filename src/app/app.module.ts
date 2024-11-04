@@ -14,7 +14,6 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environments } from './environments/environments';
-import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +31,7 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    AngularFireModule.initializeApp(environments.firebaseConfig),
+    //AngularFireModule.initializeApp(environments.firebaseConfig),
     AngularFireDatabaseModule
   ],
   providers: [],
