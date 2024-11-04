@@ -2,4 +2,8 @@
     <div *ngFor="let n of columns"class="col">{{n.text}}</div>
 </div>
 
-
+<div *ngFor="let product of products" class="row">
+    <div *ngFor="let n of columns" class="col">
+        <input [(ngModel)]="product[n]" type="text">
+    </div>
+</div>
